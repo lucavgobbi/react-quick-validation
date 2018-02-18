@@ -1,0 +1,34 @@
+{
+  "name": "react-quick-validation",
+  "version": "1.0.0",
+  "description": "An easy-to-use input validation for React with no dependencies!",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lucavgobbi/react-quick-validation.git"
+  },
+  "keywords": [
+    "react",
+    "validation",
+    "form",
+    "input"
+  ],
+  "author": "@lucavgobbi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lucavgobbi/react-quick-validation/issues"
+  },
+  "homepage": "https://github.com/lucavgobbi/react-quick-validation#readme",
+  "peerDependencies": {
+    "react": "^16.2.0"
+  },
+  "devDependencies": {
+    "typescript": "^2.7.2",
+    "@types/react": "^16.0.38"
+  }
+}
