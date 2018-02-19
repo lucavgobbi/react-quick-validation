@@ -1,6 +1,6 @@
 {
   "name": "react-quick-validation",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "An easy-to-use input validation for React with no dependencies!",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

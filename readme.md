@@ -1,4 +1,4 @@
-# react-quick-validation
+# react-quick-validation [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/lucavgobbi/react-quick-validation/blob/master/LICENSE) [![npm version](https://img.shields.io/npm/v/react-quick-validation.svg?style=flat)](https://www.npmjs.com/package/react-quick-validation)
 An easy-to-use input validation for React with no dependencies!
 Move from plain html inputs to components with built-in validation with almost no change required.
 
