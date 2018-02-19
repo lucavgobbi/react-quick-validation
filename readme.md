@@ -1,17 +1,17 @@
-#react-quick-validation
+# react-quick-validation
 An easy-to-use input validation for React with no dependencies!
 Move from plain html inputs to components with built-in validation with almost no change required.
 
->This project was build for my personal use and I decided to share it. Feel free to fork and make pull with features and bugfixes.
+> This project was build for my personal use and I decided to share it. Feel free to fork and make pull with features and bugfixes.
 
->The project was using TypeScript, there is no need to download or write 'Definitions' if you plan to use it in a TypeScript project.
+> The project was using TypeScript, there is no need to download or write 'Definitions' if you plan to use it in a TypeScript project.
 
-##Installation
-```code
+## Installation
+``` 
 npm install react-quick-validation
 ```
-##Usage
-```code javascript
+## Usage
+``` javascript
 import { TextInput, TextArea, IValidationResult } from "react-quick-validation";
 
 ...
@@ -30,81 +30,81 @@ render() {
 }
 ```
 
-##TextInput
-###Properties
-####value
+## TextInput
+### Properties
+#### value
 Type: string
 Description: Value to display (current value)
-####name
+#### name
 Type: string
 Description: field name (name is sent as a parameter on 'onChange' and defined as html name property)
-####onChange
+#### onChange
 Type: Function
 Parameters: value (string), validationResult (IValidationResult)
 Description: function binded to onChange event, parameters: 
-####className (optional)
+#### className (optional)
 Type: string
 Description: css className to be applied 
-####validations (optional)
+#### validations (optional)
 Type: Array of string
 Description: array of validations to be applied
->validations are triggered onChange() and by calling validateCurrent()
->validatios are evaluated in order, stops on the first error and display the message
-####formatter (optional)
+> validations are triggered onChange() and by calling validateCurrent()
+> validations are evaluated in order, stops on the first error and display the message
+#### formatter (optional)
 Type: Function; 
 Parameters: value (string)
 Description: callback function that modifies value onBlur and apply validations on new value
-####disabled (optional)
+#### disabled (optional)
 Type: boolean; 
 Description: disable field (uses html property)
-####placeholder (optional)
+#### placeholder (optional)
 Type: string
 Description: placeholder (uses html property)
 
-###Methods
+### Methods
 >Use React Ref to call those methods
-####validateCurrent()
+#### validateCurrent()
 Parameters: value(string)
 Description: triggers the validation for the current value, update the internal state and return an IValidationResult object with the validation result
 
-##TextArea
-###Properties
-####value
+## TextArea
+### Properties
+#### value
 Type: string
 Description: Value to display (current value)
-####name
+#### name
 Type: string
 Description: field name (name is sent as a parameter on 'onChange' and defined as html name property)
-####onChange
+#### onChange
 Type: Function
 Parameters: value (string), validationResult (IValidationResult)
 Description: function binded to onChange event, parameters: 
-####className (optional)
+#### className (optional)
 Type: string
 Description: css className to be applied 
-####validations (optional)
+#### validations (optional)
 Type: Array of string
 Description: array of validations to be applied
 >validations are triggered onChange() and by calling validateCurrent()
 >validatios are evaluated in order, stops on the first error and display the message
-####formatter (optional)
+#### formatter (optional)
 Type: Function; 
 Parameters: value (string)
 Description: callback function that modifies value onBlur and apply validations on new value
-####disabled (optional)
+#### disabled (optional)
 Type: boolean; 
 Description: disable field (uses html property)
-####rows (optional)
+#### rows (optional)
 Type: number
 Description: number of rows (uses html property)
 
-###Methods
+### Methods
 >Use React Ref to call those methods
-####validateCurrent()
+#### validateCurrent()
 Parameters: value(string)
 Description: triggers the validation for the current value, update the internal state and return an IValidationResult object with the validation result
 
-##IValidationResult
+## IValidationResult
 ``` javascript
 export interface IValidationResult {
     hasError: boolean;
@@ -115,49 +115,49 @@ export interface IValidationResult {
 ```
 
 ## Built-in Validations
-###required
+### required
 Description: the field is required
 Message: Field is required
-###length
+### length
 Parameters: min (number), max (number)
 Description: the string lenght must be >= than min, <= than max
 Message: Field must be more than ${min} characters long or Field must be less than ${max} characters long
 Example: length(10,40)
-###isEmail
+### isEmail
 Description: value must be an email
 Message: Field must be a valid email
 > regex: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-###isNumber
+### isNumber
 Description: value must be a number
 Message: Field must be a number
-###gt
+### gt
 Parameters: gt (number)
 Description: the value must be > than 'gt'
 Message: Field must be greater than ${gt}
 Example: gt(7)
-###gte
+### gte
 Parameters: gte (number)
 Description: the value must be >= than 'gte'
 Message: Field must be greater or equal than ${gte}
 Example: gte(6)
-###lt
+### lt
 Parameters: lt (number)
 Description: the value must be <> than 'lt'
 Message: Field must be less than ${lt}
 Example: lt(7)
-###lte
+### lte
 Parameters: lte (number)
 Description: the value must be <= than 'lte'
 Message: Field must be less or equal than ${lte}
 Example: lte(6)
-###maxDecimals
+### maxDecimals
 Parameters: max (number)
 Description: number of decimals must be <= than 'number'
 Message: Field must have up to ${max} decimals
 Example: maxDecimals(2)
 
-##More Examples
->This example uses TypeScript
+## More Examples
+> This example uses TypeScript
 ``` javascript
 export interface IMyComponentState {
     value1: string,
